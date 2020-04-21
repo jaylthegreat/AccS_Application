@@ -1,5 +1,6 @@
 from AccS_module import *
 from AccS_restserver_module import restserver_module
+from AccS_EZO_input_module import EZOinput_module
 import json
 
 class AccS:
@@ -53,7 +54,8 @@ class AccS:
 AccS_Main_Controller = AccS()
 AccS_Main_Controller.printMods()
 #mod = module(AccS_Main_Controller,"tryVictory")
-mod = inputModule(AccS_Main_Controller)
+# mod = inputModule(AccS_Main_Controller)
+mod = EZOinput_module(AccS_Main_Controller)
 restserver = restserver_module(AccS_Main_Controller)
 AccS_Main_Controller.loadModule(mod)
 AccS_Main_Controller.loadModule(restserver)
